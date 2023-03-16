@@ -1,0 +1,22 @@
+{% extends '_layout.html' %}
+
+{% block title %}Movie Rating App | All Movies{% endblock %}
+
+{% block body %}
+<h1 class="mb-5">All Movies</h1>
+<p class="mb-3">See our list of movie ratings below</p>
+<!-- TODO: Feature 1 -->
+<ul>
+    {% for movieList in movie %}
+    <li>{{movieList}}</li>
+{%endfor%}
+    {% for directorList in director %}
+    <li>{{directorList}}</li>
+{%endfor%}
+    {% for ratingList in rating %}
+    <li>{{ratingList}}</li>
+{%endfor%}
+
+ 
+ </ul>
+{% endblock %}
