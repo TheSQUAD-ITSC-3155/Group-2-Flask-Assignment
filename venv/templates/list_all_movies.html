@@ -6,17 +6,22 @@
 <h1 class="mb-5">All Movies</h1>
 <p class="mb-3">See our list of movie ratings below</p>
 <!-- TODO: Feature 1 -->
-<ul>
-    {% for movieList in movie %}
-    <li>{{movieList}}</li>
-{%endfor%}
-    {% for directorList in director %}
-    <li>{{directorList}}</li>
-{%endfor%}
-    {% for ratingList in rating %}
-    <li>{{ratingList}}</li>
-{%endfor%}
-
- 
- </ul>
+<table>
+    <th>
+        <tr>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Rating</th>
+        </tr>
+    </th>
+    <tbody>
+        {% for movie in movie_list %}
+            <tr>
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.director }}</td>
+                <td>{{ movie.rating }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}

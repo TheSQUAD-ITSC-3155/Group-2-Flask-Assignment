@@ -1,15 +1,19 @@
 {% extends '_layout.html' %}
-
 {% block title %}Movie Rating App | Create Movie Rating{% endblock %}
-
 {% block body %}
 <h1 class="mb-5">Create Movie Rating</h1>
 <p class="mb-3">Create a movie rating below</p>
 <!-- TODO: Feature 2 -->
-<form action = '/submit' method='post'>
-    <input type = 'text' name="movie" id ="movie" autocomplete="off">
-    <input type = 'text' name="director" id ="director" autocomplete="off">
-    <input type = 'text' name="rating" id ="rating" autocomplete="off">
-    <input type = "submit" value = "Submit">
+<form action="/movies" method="post">    
+    <label for="movie">Movie:</label>    
+    <input type="text" name="movie" id="movie" required>
+    <br>    
+    <label for="rating">Rate out of 5:</label>    
+    <input type=float name="rating" id="rating" required>
+    <br>   
+    <label for="director">Director:</label>    
+    <input type=text name="director" id="director" required>
+    <br>  
+    <input type="submit" value="Add"> 
 </form>
 {% endblock %}
